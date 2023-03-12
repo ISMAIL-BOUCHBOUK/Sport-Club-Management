@@ -152,6 +152,42 @@ namespace برنامج_تسيير_قاعة_الرياضة.PL.PAGES.PAGE1
 
             }
         }
+        private void save2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                reports.apprenti_info report1 = new reports.apprenti_info(-1);
+                report1.CreateDocument(); ;
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    reports.apprenti_info report2 = new reports.apprenti_info(Convert.ToInt32(row.Cells[0].Value));
+                    report2.CreateDocument();
+                    report1.Pages.AddRange(report2.Pages);
+                }
+                report1.Pages.RemoveAt(0);
+                report1.PrintingSystem.ContinuousPageNumbering = true;
+                new ReportPrintTool(report1).ShowPreview();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void save2_MouseEnter(object sender, EventArgs e)
+        {
+            save_mess2.Visible = true;
+            save2.Location = new Point(save2.Location.X - 2, save2.Location.Y - 2);
+            save2.Size = new Size(save2.Size.Width + 4, save2.Size.Height + 4);
+        }
+
+        private void save2_MouseLeave(object sender, EventArgs e)
+        {
+            save_mess2.Visible = false;
+            save2.Location = new Point(save2.Location.X + 2, save2.Location.Y + 2);
+            save2.Size = new Size(save2.Size.Width - 4, save2.Size.Height - 4);
+        }
 
         private void dataGridView1_Sorted(object sender, EventArgs e)
         {

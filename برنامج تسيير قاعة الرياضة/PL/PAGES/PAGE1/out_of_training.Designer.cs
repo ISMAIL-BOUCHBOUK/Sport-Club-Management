@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -55,6 +55,8 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.save_mess2 = new System.Windows.Forms.Label();
+            this.save2 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +66,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.save)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.save2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -85,14 +88,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -253,6 +256,8 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.save_mess);
+            this.panel3.Controls.Add(this.save_mess2);
+            this.panel3.Controls.Add(this.save2);
             this.panel3.Controls.Add(this.save);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -361,6 +366,33 @@
             this.simpleButton5.Text = "تفاصيل";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
+            // save_mess2
+            // 
+            this.save_mess2.AutoSize = true;
+            this.save_mess2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.save_mess2.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_mess2.Location = new System.Drawing.Point(131, 31);
+            this.save_mess2.Name = "save_mess2";
+            this.save_mess2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.save_mess2.Size = new System.Drawing.Size(226, 34);
+            this.save_mess2.TabIndex = 7;
+            this.save_mess2.Text = "تحميل معلومات المنقطعين";
+            this.save_mess2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.save_mess2.Visible = false;
+            // 
+            // save2
+            // 
+            this.save2.Image = global::برنامج_تسيير_قاعة_الرياضة.Properties.Resources.file1;
+            this.save2.Location = new System.Drawing.Point(77, 9);
+            this.save2.Name = "save2";
+            this.save2.Size = new System.Drawing.Size(48, 47);
+            this.save2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.save2.TabIndex = 6;
+            this.save2.TabStop = false;
+            this.save2.Click += new System.EventHandler(this.save2_Click);
+            this.save2.MouseEnter += new System.EventHandler(this.save2_MouseEnter);
+            this.save2.MouseLeave += new System.EventHandler(this.save2_MouseLeave);
+            // 
             // out_of_training
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -390,6 +422,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.save)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.save2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,5 +448,7 @@
         private System.Windows.Forms.PictureBox save;
         private System.Windows.Forms.Label save_mess;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label save_mess2;
+        private System.Windows.Forms.PictureBox save2;
     }
 }

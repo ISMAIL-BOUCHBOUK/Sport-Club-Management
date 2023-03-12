@@ -180,5 +180,10 @@ namespace برنامج_تسيير_قاعة_الرياضة.PL.PAGES.PAGE1
             abs.get_data();
             this.Hide();
         }
+
+        private void save_mess_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

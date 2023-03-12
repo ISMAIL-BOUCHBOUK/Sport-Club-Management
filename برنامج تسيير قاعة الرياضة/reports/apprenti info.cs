@@ -70,21 +70,24 @@ namespace برنامج_تسيير_قاعة_الرياضة.reports
             para[0] = new SqlParameter("id", index);
             DAL.Open();
             dr = DAL.Read("AP_affichage det", para);
-            dr.Read();
-            xrLabel17.Text = dr.GetString(0);
-            xrLabel18.Text = dr.GetString(1);
-            xrLabel19.Text = dr.GetDateTime(2).ToShortDateString();
-            xrLabel20.Text = dr.GetString(3);
-            xrLabel21.Text = dr.GetInt32(4).ToString();
-            xrLabel22.Text = mois(dr.GetDateTime(5).Month)+" "+ dr.GetDateTime(5).Year.ToString();
-            xrLabel23.Text = dr.GetString(6);
-            xrLabel24.Text = dr.GetString(7);
-            xrLabel25.Text = dr.GetString(8) + " 212+";
-            xrLabel26.Text = dr.GetInt32(9).ToString();
-            xrLabel27.Text = dr.GetString(10);
-            xrLabel28.Text = dr.GetString(11);
-            xrLabel29.Text = dr.GetString(12);
-            xrLabel30.Text = dr.GetString(13) + " 212+";
+            if (dr.Read())
+            {
+                xrLabel17.Text = dr.GetString(0);
+                xrLabel18.Text = dr.GetString(1);
+                xrLabel19.Text = dr.GetDateTime(2).ToShortDateString();
+                xrLabel20.Text = dr.GetString(3);
+                xrLabel21.Text = dr.GetInt32(4).ToString();
+                xrLabel22.Text = mois(dr.GetDateTime(5).Month) + " " + dr.GetDateTime(5).Year.ToString();
+                xrLabel23.Text = dr.GetString(6);
+                xrLabel24.Text = dr.GetString(7);
+                xrLabel25.Text = dr.GetString(8) + " 212+";
+                xrLabel26.Text = dr.GetInt32(9).ToString();
+                xrLabel27.Text = dr.GetString(10);
+                xrLabel28.Text = dr.GetString(11);
+                xrLabel29.Text = dr.GetString(12);
+                xrLabel30.Text = dr.GetString(13) + " 212+";
+            }
+            
             DAL.Close();
         }
 

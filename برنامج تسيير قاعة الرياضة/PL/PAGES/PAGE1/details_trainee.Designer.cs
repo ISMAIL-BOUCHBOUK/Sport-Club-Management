@@ -104,6 +104,7 @@
             this.save_mess.Text = "تحميل معلومات المتدرب";
             this.save_mess.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.save_mess.Visible = false;
+            this.save_mess.Click += new System.EventHandler(this.save_mess_Click);
             // 
             // save
             // 
